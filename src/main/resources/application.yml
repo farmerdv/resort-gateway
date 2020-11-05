@@ -40,15 +40,15 @@ spring:
     gateway:
       routes:
         - id: reserve
-          uri: http://reserve:8080
-          predicates:
-            - Path=/reserves/** 
+            uri: http://localhost:8081
+            predicates:
+              - Path=/reserves/**
         - id: confirm
-          uri: http://confirm:8080
+          uri: http://localhost:8082
           predicates:
-            - Path=/confirms/**/cancellations/** 
+            - Path=/confirms/**,/cancellations/**
         - id: mypage
-          uri: http://mypage:8080
+          uri: http://localhost:8083
           predicates:
             - Path= /mypages/**
       globalcors:
