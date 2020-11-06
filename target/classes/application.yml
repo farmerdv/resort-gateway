@@ -1,7 +1,5 @@
 server:
-  port: 8088
-
----
+  port: 8080
 
 spring:
   profiles: default
@@ -40,9 +38,9 @@ spring:
     gateway:
       routes:
         - id: reserve
-            uri: http://reserve:8080
-            predicates:
-              - Path=/reserves/**
+          uri: http://reserve:8080
+          predicates:
+            - Path=/reserves/**
         - id: confirm
           uri: http://confirm:8080
           predicates:
