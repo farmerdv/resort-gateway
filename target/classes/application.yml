@@ -40,9 +40,9 @@ spring:
     gateway:
       routes:
         - id: reserve
-          uri: http://reserve:8080
-          predicates:
-            - Path=/reserves/**
+            uri: http://reserve:8080
+            predicates:
+              - Path=/reserves/**
         - id: confirm
           uri: http://confirm:8080
           predicates:
